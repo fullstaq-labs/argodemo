@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-server
+spec:
+  type: LoadBalancer
+  loadBalancerSourceRanges:
+    - "84.105.103.142/32"
