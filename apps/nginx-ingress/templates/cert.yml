@@ -1,0 +1,17 @@
+{{ if .Values.manageCerts }}
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: www
+  namespace: nginx-ingress 
+spec:
+  secretName: www-tls
+  issuerRef:
+    # The issuer created previously
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - {{ .Values.domain }}
+  - www.{{ .Values.domain }}
+  commonName: {{ .Values.domain }}
+{{ end }}

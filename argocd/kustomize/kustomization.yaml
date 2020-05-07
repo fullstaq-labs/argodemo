@@ -5,6 +5,7 @@ resources:
   - base/namespace.yaml
   - base/install.yaml
   - argo-apps/argocd.yaml
+  - argo-apps/motherofallapps.yaml
 
 patches:
   - patches/argocd-server.yaml

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: ingress-extern
+
+dependencies:
+- name: nginx-ingress
+  version: 1.36.2
+  repository: https://kubernetes-charts.storage.googleapis.com
+
+type: application
+version: 0.1.0

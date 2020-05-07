@@ -1,0 +1,22 @@
+manageCerts: false
+
+nginx-ingress:
+  controller:
+    useComponentLabel: true
+    autoscaling:
+      enabled: true
+      targetCPUUtilizationPercentage: 70
+      targetMemoryUtilizationPercentage: 60
+      maxReplicas: 8
+      minReplicas: 3
+
+    publishService:
+      enabled: true
+    replicaCount: 3
+    resources:
+      requests:
+        cpu: 50m
+        memory: 300Mi
+      limits:
+        cpu: 250m
+        memory: 500Mi
