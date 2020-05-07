@@ -1,0 +1,4 @@
+.envrc
+.kubeconfig
+.argoconfig
+terraform/
